@@ -1,0 +1,96 @@
+/*
+ * @Author: Jack Lu 
+ * @Date: 2018-04-02 00:21:25 
+ * @Last Modified by: Jack Lu
+ * @Last Modified time: 2018-04-08 22:30:26
+ */
+
+.hs_main {
+    .hs_carousel {
+        position: relative;
+        width: 100%; // height: 610px;
+        overflow: hidden;
+        z-index: 1;
+        .carousel-inner {
+            .item {
+                img {
+                    width: 100%; // height: 610px;
+                }
+            }
+        }
+    }
+    /* 新闻动态部份 */
+    .hs_news {
+        margin-top: 20px;
+        .news_wrap {
+            .news_title {
+                text-align: center;
+                border-bottom: 2px solid #0654a6;
+            }
+            .news_content {
+                margin-top: 50px;
+                .content_img {
+                    width: 50%;
+                    float: left; // padding-right: 30px;
+                    overflow: hidden;
+                    .swiper-container {
+                        width: 95%; // height: 350px;
+                        margin-left: 0;
+                        .swiper-slide {
+                            a {
+                                display: block;
+                                width: 100%;
+                                position: relative;
+                                p {
+                                    color: #fff;
+                                    font-weight: 600;
+                                    position: absolute;
+                                    bottom: 5px;
+                                    left: 0; // display: none;
+                                }
+                            }
+                        }
+                        .swiper-pagination {
+                            width: 100%;
+                            bottom: 0;
+                        }
+                    }
+                }
+                .content_list {
+                    width: 50%;
+                    float: right;
+                    .news_tabs {
+                        .more {
+                            float: right;
+                            font-size: 14px;
+                            line-height: 17px;
+                        }
+                    }
+                    .tab-content {
+                        margin-top: 20px;
+                        .main_list {
+                            list-style: red;
+                            li {
+                                margin-bottom: 20px;
+                                font-size: 16px;
+                                a {
+                                    p {
+                                        float: left;
+                                        margin-bottom: -6px;
+                                        width: 70%;
+                                        overflow: hidden;
+                                        white-space: nowrap;
+                                        text-overflow: ellipsis;
+                                    }
+                                    span {
+                                        float: right;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

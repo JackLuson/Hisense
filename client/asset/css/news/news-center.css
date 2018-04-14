@@ -1,0 +1,70 @@
+/*
+ * @Author: Jack Lu 
+ * @Date: 2018-04-11 23:10:53 
+ * @Last Modified by: Jack Lu
+ * @Last Modified time: 2018-04-14 21:31:33
+ */
+.hs_main .row {
+  position: relative;
+  margin: 0;
+}
+.hs_main .row .news_left {
+  border: 1px solid #ccc;
+  min-height: 600px;
+  border-top: 2px solid #033675;
+}
+.hs_main .row .news_left .global {
+  margin: 0 -15px 0;
+  background-color: #f9f9f9;
+  border-bottom: 2px solid #e5e5e5;
+}
+.hs_main .row .news_left .global h3 {
+  margin: 0;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+.hs_main .row .news_left .title_list {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.hs_main .row .news_left .title_list ul li {
+  padding-bottom: 5px;
+}
+.hs_main .row .news_right {
+  padding-left: 30px;
+}
+.hs_main .row .news_right .title {
+  border-bottom: 1px solid #ccc;
+}
+.hs_main .row .news_right .news_content ul {
+  padding-top: 20px;
+}
+.hs_main .row .news_right .news_content ul li {
+  position: relative;
+}
+.hs_main .row .news_right .news_content ul li a {
+  display: block;
+  margin-top: -20px;
+}
+.hs_main .row .news_right .news_content ul li a p {
+  color: #333;
+  font-size: 16px;
+  width: 80%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.hs_main .row .news_right .news_content ul li span {
+  position: absolute;
+  top: 1px;
+  right: 0;
+}
+.hs_main .row .news_right #pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}

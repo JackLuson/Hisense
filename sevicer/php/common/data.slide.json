@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "image": "../../static/uploads/slide1.jpg",
+        "text": "轮播项一",
+        "link": "https://zce.me"
+    },
+    {
+        "id": 2,
+        "image": "../../static/uploads/slide2.jpg",
+        "text": "轮播项二",
+        "link": "https://zce.me"
+    },
+    {
+        "id": 3,
+        "image": "../../static/uploads/slide3.jpg",
+        "text": "轮播项二",
+        "link": "https://zce.me"
+    },
+    {
+        "id": 4,
+        "image": "../../static/uploads/slide4.jpg",
+        "text": "轮播项二",
+        "link": "https://zce.me"
+    },
+    {
+        "id": 5,
+        "image": "../../static/uploads/5ac9b8f1473cd2223.jpg",
+        "text": "carousel5",
+        "link": "addSlideDatas.php"
+    }
+]

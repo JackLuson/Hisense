@@ -1,0 +1,83 @@
+/*
+ * @Author: Jack Lu 
+ * @Date: 2018-04-02 00:21:25 
+ * @Last Modified by: Jack Lu
+ * @Last Modified time: 2018-04-08 22:30:26
+ */
+.hs_main {
+  /* 新闻动态部份 */
+}
+.hs_main .hs_carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+.hs_main .hs_carousel .carousel-inner .item img {
+  width: 100%;
+}
+.hs_main .hs_news {
+  margin-top: 20px;
+}
+.hs_main .hs_news .news_wrap .news_title {
+  text-align: center;
+  border-bottom: 2px solid #0654a6;
+}
+.hs_main .hs_news .news_wrap .news_content {
+  margin-top: 50px;
+}
+.hs_main .hs_news .news_wrap .news_content .content_img {
+  width: 50%;
+  float: left;
+  overflow: hidden;
+}
+.hs_main .hs_news .news_wrap .news_content .content_img .swiper-container {
+  width: 95%;
+  margin-left: 0;
+}
+.hs_main .hs_news .news_wrap .news_content .content_img .swiper-container .swiper-slide a {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+.hs_main .hs_news .news_wrap .news_content .content_img .swiper-container .swiper-slide a p {
+  color: #fff;
+  font-weight: 600;
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+}
+.hs_main .hs_news .news_wrap .news_content .content_img .swiper-container .swiper-pagination {
+  width: 100%;
+  bottom: 0;
+}
+.hs_main .hs_news .news_wrap .news_content .content_list {
+  width: 50%;
+  float: right;
+}
+.hs_main .hs_news .news_wrap .news_content .content_list .news_tabs .more {
+  float: right;
+  font-size: 14px;
+  line-height: 17px;
+}
+.hs_main .hs_news .news_wrap .news_content .content_list .tab-content {
+  margin-top: 20px;
+}
+.hs_main .hs_news .news_wrap .news_content .content_list .tab-content .main_list {
+  list-style: red;
+}
+.hs_main .hs_news .news_wrap .news_content .content_list .tab-content .main_list li {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.hs_main .hs_news .news_wrap .news_content .content_list .tab-content .main_list li a p {
+  float: left;
+  margin-bottom: -6px;
+  width: 70%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.hs_main .hs_news .news_wrap .news_content .content_list .tab-content .main_list li a span {
+  float: right;
+}

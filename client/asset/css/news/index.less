@@ -1,0 +1,81 @@
+/*
+ * @Author: Jack Lu 
+ * @Date: 2018-04-09 13:20:54 
+ * @Last Modified by: Jack Lu
+ * @Last Modified time: 2018-04-11 21:52:45
+ */
+
+.hs_main {
+    .news {
+        .title {
+            border-bottom: 1px solid #666;
+            margin-bottom: 20px; // .h3 {}
+            .more {
+                margin-top: 30px;
+            }
+        }
+        .news_left {
+            padding-right: 50px;
+            .news_swiper {
+                a {
+                    display: block;
+                    width: 100%;
+                    position: relative;
+                    color: #fff;
+                    padding-bottom: 50px;
+                    img {
+                        width: 100%;
+                        display: block;
+                    }
+                    p {
+                        width: 100%;
+                        height: 50px;
+                        line-height: 50px;
+                        background: #004098;
+                        font-weight: 600;
+                        margin-bottom: 0;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0; // display: none;
+                    }
+                }
+            }
+            .swiper-pagination {
+                z-index: 999;
+                color: #fff;
+                bottom: 3px !important;
+                right: 3px !important;
+            }
+            .news_list {
+                margin-top: 20px;
+                a {
+                    display: block; // line-height: 30px;
+                    p {
+                        width: 80%;
+                        font-size: 16px;
+                        margin: 0;
+                        color: #333;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
+                    span {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        .news_right {
+            video {
+                width: 100%;
+            }
+            a {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+            .root {}
+            .notice {}
+        }
+    }
+}

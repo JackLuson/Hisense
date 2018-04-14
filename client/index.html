@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- 理想视口 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <!-- 新 Bootstrap 核心 CSS 文件 -->
+  <link rel="stylesheet" href="./asset/lib/bootstrap/dist/css/bootstrap.css">
+  <!-- <link rel="stylesheet" href="./asset/lib/bootstrap/dist/css/bootstrap.min.css"> -->
+  <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+  <!-- <link rel="stylesheet" href="./asset/lib/bootstrap/dist/css/bootstrap-theme.css"> -->
+  <!-- <link rel="stylesheet" href="./asset/lib/bootstrap/dist/css/bootstrap-theme.min.css"> -->
+  <!-- 引入字体图标库 -->
+  <link rel="stylesheet" href="./asset/lib/swipe/swiper.css">
+  <link rel="stylesheet" href="./asset/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./asset//css/common.css">
+  <link rel="stylesheet" href="./asset/css/index.css">
+  <link rel="shortcut icon" href="./asset/images/bitbug_favicon.ico" type="image/x-icon">
+  <title>广东海信电子有限公司</title>
+  <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header class="header">
+    <div class="container">
+      <div class="header_container clearfix">
+        <p class="left_content pull-left">
+          <a class="logo" href="javascript:;">
+            <em>欢迎来到 &nbsp;广东海信电子有限公司官网&nbsp;&nbsp;!</em>
+          </a>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="javascript:;">
+            <span class="icon-envelope"></span>&nbsp;&nbsp; 邮箱登录</a>
+        </p>
+        <p class="right_content pull-right">
+          <a href="javascript:;">微信关注&nbsp;&nbsp;
+            <span class="wechat"></span>
+            <span class="wechatPic">
+              <img src="./asset/images/wc_ewm.jpg" alt="">
+            </span>
+          </a>
+        </p>
+        </d>
+      </div>
+  </header>
+  <!-- 导航栏部份 -->
+  <nav class="hs_nav navbar navbar-default">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+          aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand hs_logo" href="#">
+          <h3 class="hs_name">Hisense</h3>
+          <div class="name_wrap">
+            <span>广东海信电子有限公司</span>
+            <p>GuangDong HisenseElectricCo.,Ltd.</p>
+          </div>
+        </a>
+        </d>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="hs_nav_content collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="#">网站首页
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">集团概况</a>
+            </li>
+            <li>
+              <a href="./pages/news/index.html">新闻中心</a>
+            </li>
+            <li>
+              <a href="#">产品与服务
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">人才招聘</a>
+            </li>
+            <li>
+              <a href="#">联系我们
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+          </ul>
+          <!--           <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="#">Action</a>
+            </li>
+            <li>
+              <a href="#">Another action</a>
+            </li>
+            <li>
+              <a href="#">Something else here</a>
+            </li>
+            <li role="separator" class="divider"></li>
+            <li>
+              <a href="#">Separated link</a>
+            </li>
+            <li role="separator" class="divider"></li>
+            <li>
+              <a href="#">One more separated link</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="#">Link</a>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="#">Action</a>
+            </li>
+            <li>
+              <a href="#">Another action</a>
+            </li>
+            <li>
+              <a href="#">Something else here</a>
+            </li>
+            <li role="separator" class="divider"></li>
+            <li>
+              <a href="#">Separated link</a>
+            </li>
+          </ul>
+        </li>
+      </ul> -->
+        </div>
+      </div>
+  </nav>
+  <!-- 主体部分 -->
+  <div class="hs_main">
+    <!-- 轮播图部分 -->
+    <div id="carousel-example-generic" class="hs_carousel carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="../../static/uploads/5ac9c833b6ff61820.jpg" alt="...">
+        </div>
+        <div class="item">
+          <img src="../../static/uploads/5ac9c833b6ff61820.jpg" alt="...">
+        </div>
+        <div class="item">
+          <img src="../../static/uploads/5ac9c833b6ff61820.jpg" alt="...">
+        </div>
+        <div class="item">
+          <img src="../../static/uploads/5ac9c833b6ff61820.jpg" alt="...">
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <!-- 新闻动态部份 -->
+    <div class="hs_news">
+      <div class="container">
+        <div class="news_wrap">
+          <!-- 新闻标题 -->
+          <div class="news_title">
+            <a href="javascript:;">
+              <img src="./asset/images/news_title.jpg" alt="">
+            </a>
+          </div>
+          <!-- 新闻内容部分 -->
+          <div class="news_content clearfix">
+            <div class="content_img">
+              <!--新闻图片轮播-->
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a href="javascript:;">
+                      <img src="./asset/images/news_lunbo1.jpg" alt="">
+                      <p>某某老总在某天视察公司,并向公司扔了200万</p>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="javascript:;">
+                      <img src="./asset/images/news_lunbo2.jpg" alt="">
+                      <p>某某老总在某天视察公司,并向公司扔了200万</p>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="javascript:;">
+                      <img src="./asset/images/news_lunbo3.jpg" alt="">
+                      <p>某某老总在某天视察公司,并向公司扔了200万</p>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="javascript:;">
+                      <img src="./asset/images/news_lunbo4.jpg" alt="">
+                      <p>某某老总在某天视察公司,并向公司扔了200万</p>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="javascript:;">
+                      <img src="./asset/images/news_lunbo5.jpg" alt="">
+                      <p>某某老总在某天视察公司,并向公司扔了200万</p>
+                    </a>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+            <div class="content_list">
+              <!-- Nav tabs -->
+              <ul class="news_tabs nav nav-tabs" role="tablist">
+                <li role="presentation" class="active">
+                  <a href="#home" aria-controls="home" role="tab" data-toggle="tab">企业要闻</a>
+                </li>
+                <li role="presentation">
+                  <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">通知公告</a>
+                </li>
+                <li role="presentation">
+                  <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">基层信息</a>
+                </li>
+                <li class="more" role="presentation">
+                  <a href="#more" aria-controls="settings" role="tab" data-toggle="tab">more ></a>
+                </li>
+              </ul>
+
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="home">
+                  <ul class="main_list">
+                    <li>
+                      <a class="clearfix" href="#">
+                        <p>从做产品到adfafdafadfaafdafadafafad做标准 海信牵头起草激光电视行业从afadafa做产品到做标准 海信牵头起草激光电视dsA C行</p>
+                        <span>2017.11.30</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p>从做产品到adfafdafadfaafdafadafafad做标准 海信牵头起草激光电视行业从afadafa做产品到做标准 海信牵头起草激光电视dsA C行</p>
+                        <span>2017.11.30</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p>从做产品到adfafdafadfaafdafadafafad做标准 海信牵头起草激光电视行业从afadafa做产品到做标准 海信牵头起草激光电视dsA C行</p>
+                        <span>2017.11.30</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p>从做产品到adfafdafadfaafdafadafafad做标准 海信牵头起草激光电视行业从afadafa做产品到做标准 海信牵头起草激光电视dsA C行</p>
+                        <span>2017.11.30</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p>从做产品到adfafdafadfaafdafadafafad做标准 海信牵头起草激光电视行业从afadafa做产品到做标准 海信牵头起草激光电视dsA C行</p>
+                        <span>2017.11.30</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p>从做产品到adfafdafadfaafdafadafafad做标准 海信牵头起草激光电视行业从afadafa做产品到做标准 海信牵头起草激光电视dsA C行</p>
+                        <span>2017.11.30</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p>从做产品到adfafdafadfaafdafadafafad做标准 海信牵头起草激光电视行业从afadafa做产品到做标准 海信牵头起草激光电视dsA C行</p>
+                        <span>2017.11.30</span>
+                      </a>
+                    </li>
+
+
+                  </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="profile">
+                  <ul class="main_list">
+                    <li>
+                      <a href="#">
+                        <p>从做产品到adfafdafadfaafdafadafafad做标准 海信牵头起草激光电视行业从afadafa做产品到做标准 海信牵头起草激光电视dsA C行</p>
+                        <span>2017.11.30</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p>从做产品到adfafdafadfaafdafadafafad做标准 海信牵头起草激光电视行业从afadafa做产品到做标准 海信牵头起草激光电视dsA C行</p>
+                        <span>2017.11.30</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p>从做产品到adfafdafadfaafdafadafafad做标准 海信牵头起草激光电视行业从afadafa做产品到做标准 海信牵头起草激光电视dsA C行</p>
+                        <span>2017.11.30</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p>从做产品到adfafdafadfaafdafadafafad做标准 海信牵头起草激光电视行业从afadafa做产品到做标准 海信牵头起草激光电视dsA C行</p>
+                        <span>2017.11.30</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p>从做产品到adfafdafadfaafdafadafafad做标准 海信牵头起草激光电视行业从afadafa做产品到做标准 海信牵头起草激光电视dsA C行</p>
+                        <span>2017.11.30</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p>从做产品到adfafdafadfaafdafadafafad做标准 海信牵头起草激光电视行业从afadafa做产品到做标准 海信牵头起草激光电视dsA C行</p>
+                        <span>2017.11.30</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p>从做产品到adfafdafadfaafdafadafafad做标准 海信牵头起草激光电视行业从afadafa做产品到做标准 海信牵头起草激光电视dsA C行</p>
+                        <span>2017.11.30</span>
+                      </a>
+                    </li>
+
+                  </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="messages">
+                  <ul class="main_list">
+                    <li>
+                      <a href="#">
+                        <p>从做产品到adfafdafadfaafdafadafafad做标准 海信牵头起草激光电视行业从afadafa做产品到做标准 海信牵头起草激光电视dsA C行</p>
+                        <span>2017.11.30</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p>从做产品到adfafdafadfaafdafadafafad做标准 海信牵头起草激光电视行业从afadafa做产品到做标准 海信牵头起草激光电视dsA C行</p>
+                        <span>2017.11.30</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p>从做产品到adfafdafadfaafdafadafafad做标准 海信牵头起草激光电视行业从afadafa做产品到做标准 海信牵头起草激光电视dsA C行</p>
+                        <span>2017.11.30</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p>从做产品到adfafdafadfaafdafadafafad做标准 海信牵头起草激光电视行业从afadafa做产品到做标准 海信牵头起草激光电视dsA C行</p>
+                        <span>2017.11.30</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p>从做产品到adfafdafadfaafdafadafafad做标准 海信牵头起草激光电视行业从afadafa做产品到做标准 海信牵头起草激光电视dsA C行</p>
+                        <span>2017.11.30</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p>从做产品到adfafdafadfaafdafadafafad做标准 海信牵头起草激光电视行业从afadafa做产品到做标准 海信牵头起草激光电视dsA C行</p>
+                        <span>2017.11.30</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p>从做产品到adfafdafadfaafdafadafafad做标准 海信牵头起草激光电视行业从afadafa做产品到做标准 海信牵头起草激光电视dsA C行</p>
+                        <span>2017.11.30</span>
+                      </a>
+                    </li>
+
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div>
+      <div class="container">
+        <div class="footer_content row">
+          <div class="col-sm-3">
+            <ul class="list-unstyled">
+              <li>
+                <a href="javascript:;">网站首页</a>
+              </li>
+              <li>
+                <a href="javascript:;">集团概况</a>
+              </li>
+              <li>
+                <a href="javascript:;">新闻中心</a>
+              </li>
+              <li>
+                <a href="javascript:;">产品与服务</a>
+              </li>
+              <li>
+                <a href="javascript:;">人才招聘</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-3">
+            <ul class="list-unstyled">
+              <li>
+                <a href="javascript:;">联系我们</a>
+              </li>
+              <li>
+                <a href="javascript:;">常见问题</a>
+              </li>
+              <li>
+                <a href="javascript:;">隐私声明</a>
+              </li>
+              <li>
+                <a href="javascript:;">版权声明</a>
+              </li>
+              <li>
+                <a href="javascript:;">使用帮助</a>
+              </li>
+              <li>
+                <a href="javascript:;">网站地图</a>
+              </li>
+            </ul>
+          </div>
+          <div class="related_link col-sm-3">
+            <ul class="list-unstyled">
+              <li>
+                <h5>友情链接</h5>
+              </li>
+              <li>
+                <div class="dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="true">
+                    &nbsp; 海信集团&nbsp;&nbsp;&nbsp;
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li>
+                      <a href="#">集团官网</a>
+                    </li>
+                    <li>
+                      <a href="#">海信电器</a>
+                    </li>
+                    <li>
+                      <a href="#">海信科龙</a>
+                    </li>
+                    <li>
+                      <a href="#">海信容声</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-3">
+            <div class="link_ewm clearfix">
+              <div class="wc_ewm pull-left">
+                <h5>关注我们</h5>
+                <img src="./asset/images/wc_ewm.jpg" alt="">
+              </div>
+              <div class="app_ewm pull-right">
+                <h5>海信APP</h5>
+                <img src="./asset/images/hs_app.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer_bottom row clearfix">
+          <div class="bt_left pull-left col-sm-6">
+            <div class="media">
+              <div class="media-left">
+                <a href="#">
+                  <img src="./asset/images/logo.png" alt="">
+                </a>
+              </div>
+              <div class="media-body">
+                <p class="media-heading">广东省海信电子有限公司</p>
+                <p>GuangDong HisenseElectricCo.,Ltd.</p>
+              </div>
+            </div>
+          </div>
+          <div class="bt-right col-sm-6 text-right">
+            <p>Copyright©2018 版权所有 广东省海信电子有限公司 备案序号: 鲁ICP备05027830</p>
+            <p>
+              <a href="http:////m.amap.com/navi/?dest=113.004797,22.669498&destName=广东海信电子有限公司&hideRouteIcon=1&key=05698f09079845ce9dc652316fd01bb8">
+              地址: 江门市先进制造业江沙示范园区海信大道8号</a>邮编：529000</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="height: 200px"></div>
+  <!-- 轮播图 -->
+  <!-- 引入jquery库 -->
+  <script type='text/template' id='slideContentTemp'>
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+  </script>
+  <script src="./asset/lib/jquery/jquery-1.12.2.js"></script>
+  <!-- 引入Bootstrap 核心 JavaScript 文件 -->
+  <script src="./asset/lib/bootstrap/dist/js/bootstrap.js "></script>
+  <!-- 引入模板引擎 -->
+  <script src="./asset/lib/jquery/template-web.js"></script>
+  <!-- 引入轮播图插件 -->
+  <script src="./asset/lib/swipe/swiper.jquery.js"></script>
+  <!-- <script src="./asset/lib/swipe/swipe.js "></script> -->
+  <script src="./asset/lib/layer/layer.js "></script>
+  <script src="./asset/js/index.js "></script>
+</body>
+
+</html>
