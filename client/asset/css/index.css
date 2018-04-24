@@ -2,7 +2,7 @@
  * @Author: Jack Lu 
  * @Date: 2018-04-02 00:21:25 
  * @Last Modified by: Jack Lu
- * @Last Modified time: 2018-04-08 22:30:26
+ * @Last Modified time: 2018-04-23 19:57:58
  */
 .hs_main {
   /* 新闻动态部份 */
@@ -33,12 +33,17 @@
 }
 .hs_main .hs_news .news_wrap .news_content .content_img .swiper-container {
   width: 95%;
+  height: 350px;
   margin-left: 0;
 }
 .hs_main .hs_news .news_wrap .news_content .content_img .swiper-container .swiper-slide a {
   display: block;
   width: 100%;
   position: relative;
+}
+.hs_main .hs_news .news_wrap .news_content .content_img .swiper-container .swiper-slide a img {
+  width: 100%;
+  height: 350px;
 }
 .hs_main .hs_news .news_wrap .news_content .content_img .swiper-container .swiper-slide a p {
   color: #fff;
@@ -67,8 +72,8 @@
   list-style: red;
 }
 .hs_main .hs_news .news_wrap .news_content .content_list .tab-content .main_list li {
-  margin-bottom: 20px;
-  font-size: 16px;
+  margin-bottom: 29px;
+  font-size: 17px;
 }
 .hs_main .hs_news .news_wrap .news_content .content_list .tab-content .main_list li a p {
   float: left;

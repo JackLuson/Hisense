@@ -2,7 +2,7 @@
  * @Author: Jack Lu 
  * @Date: 2018-04-09 13:20:54 
  * @Last Modified by: Jack Lu
- * @Last Modified time: 2018-04-11 21:52:45
+ * @Last Modified time: 2018-04-21 01:38:27
  */
 
 .hs_main {
@@ -17,26 +17,34 @@
         .news_left {
             padding-right: 50px;
             .news_swiper {
-                a {
-                    display: block;
-                    width: 100%;
-                    position: relative;
-                    color: #fff;
-                    padding-bottom: 50px;
-                    img {
-                        width: 100%;
+                .swiper-slide {
+                    height: 500px;
+                    overflow: hidden;
+                    padding: 20px 40px 0px 6px;
+                    a {
                         display: block;
-                    }
-                    p {
                         width: 100%;
-                        height: 50px;
-                        line-height: 50px;
-                        background: #004098;
-                        font-weight: 600;
-                        margin-bottom: 0;
-                        position: absolute;
-                        bottom: 0;
-                        left: 0; // display: none;
+                        height: 100%;
+                        position: relative;
+                        color: #fff;
+                        padding-bottom: 50px;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            display: block;
+                        }
+                        p {
+                            width: 100%;
+                            height: 50px;
+                            line-height: 50px;
+                            background: #004098;
+                            font-weight: 600;
+                            margin-bottom: 0;
+                            padding-left: 10px;
+                            position: absolute;
+                            bottom: 0;
+                            left: 0; // display: none;
+                        }
                     }
                 }
             }
@@ -47,7 +55,7 @@
                 right: 3px !important;
             }
             .news_list {
-                margin-top: 20px;
+                margin-top: 30px;
                 a {
                     display: block; // line-height: 30px;
                     p {
@@ -74,8 +82,6 @@
                 white-space: nowrap;
                 text-overflow: ellipsis;
             }
-            .root {}
-            .notice {}
         }
     }
 }

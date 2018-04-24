@@ -1,0 +1,117 @@
+/*
+ * @Author: Jack Lu 
+ * @Date: 2018-04-23 20:40:40 
+ * @Last Modified by: Jack Lu
+ * @Last Modified time: 2018-04-25 00:55:12
+ */
+#container {
+  margin-top: 30px;
+  width: 1000px;
+  height: 600px;
+}
+.page_nav {
+  border-bottom: 1px solid #dcdcdc;
+  height: 80px;
+  line-height: 80px;
+}
+.page_nav li {
+  float: left;
+  font-size: 18px;
+  margin-right: 2em;
+  height: 80px;
+}
+.page_nav li a {
+  display: block;
+  height: 100%;
+}
+.address {
+  display: none;
+}
+.address .contactus {
+  padding: 40px;
+}
+.address .contactus li {
+  width: 50%;
+  float: left;
+}
+.address .contactus li p {
+  padding-bottom: 5px;
+}
+.address .contactus li h3 {
+  color: #00afa1;
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: normal;
+}
+/* Basic Grey */
+.feedback .basic-grey {
+  max-width: 800px;
+  background: #F7F7F7;
+  padding: 25px 15px 25px 10px;
+  font: 12px Georgia, "Times New Roman", Times, serif;
+  color: #888;
+  text-shadow: 1px 1px 1px #FFF;
+  border: 1px solid #E4E4E4;
+}
+.feedback .basic-grey h1 {
+  font-size: 25px;
+  padding: 0px 0px 10px 40px;
+  display: block;
+  border-bottom: 1px solid #E4E4E4;
+  margin: -10px -15px 30px -10px;
+  color: #888;
+}
+.feedback .basic-grey h1 span {
+  display: block;
+  font-size: 11px;
+}
+.feedback .basic-grey label {
+  display: block;
+  margin: 0px;
+}
+.feedback .basic-grey label span {
+  float: left;
+  width: 20%;
+  text-align: right;
+  padding-right: 10px;
+  margin-top: 10px;
+  color: #888;
+}
+.feedback .basic-grey input[type="text"],
+.feedback .basic-grey input[type="phone"],
+.feedback .basic-grey textarea {
+  border: 1px solid #DADADA;
+  color: #888;
+  height: 30px;
+  margin-bottom: 16px;
+  margin-right: 6px;
+  margin-top: 2px;
+  outline: 0 none;
+  padding: 3px 3px 3px 5px;
+  width: 70%;
+  font-size: 12px;
+  line-height: 15px;
+  box-shadow: inset 0px 1px 4px #ECECEC;
+  -moz-box-shadow: inset 0px 1px 4px #ECECEC;
+  -webkit-box-shadow: inset 0px 1px 4px #ECECEC;
+}
+.feedback .basic-grey textarea {
+  height: 200px;
+  padding: 5px 3px 3px 5px;
+}
+.feedback .basic-grey .button {
+  background: #E27575;
+  border: none;
+  padding: 10px 25px 10px 25px;
+  color: #FFF;
+  box-shadow: 1px 1px 5px #B6B6B6;
+  border-radius: 3px;
+  text-shadow: 1px 1px 1px #9E3F3F;
+  cursor: pointer;
+}
+.feedback .basic-grey:hover {
+  background: #CF7A7A;
+}
+.feedback .basic-grey:hover h1 {
+  color: #fff;
+}

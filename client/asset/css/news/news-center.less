@@ -2,7 +2,7 @@
  * @Author: Jack Lu 
  * @Date: 2018-04-11 23:10:53 
  * @Last Modified by: Jack Lu
- * @Last Modified time: 2018-04-14 21:31:33
+ * @Last Modified time: 2018-04-20 18:11:46
  */
 
 .hs_main {
@@ -45,6 +45,8 @@
                 ul {
                     padding-top: 20px;
                     li {
+                        padding-top: 33px;
+                        padding-bottom: 1px;
                         position: relative;
                         a {
                             display: block;
@@ -60,17 +62,24 @@
                         }
                         span {
                             position: absolute;
-                            top: 1px;
+                            top: 13px;
                             right: 0;
+                        }
+                        &:hover{
+                            background: rgb(188, 214, 201);
                         }
                     }
                 }
             }
-            #pagination{
-                position: absolute;
-                bottom: 10px;
-                left: 50%;
-                transform: translateX(-50%);
+        }
+        .page {
+            position: absolute;
+            bottom: -35px;
+            left: 50%;
+            .total {
+                display: inline-block;
+                position: relative;
+                top: -30px;
             }
         }
     }

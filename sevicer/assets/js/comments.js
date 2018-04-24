@@ -2,82 +2,142 @@
  * @Author: Jack Lu 
  * @Date: 2018-03-09 09:46:05 
  * @Last Modified by: Jack Lu
- * @Last Modified time: 2018-03-15 01:16:02
+ * @Last Modified time: 2018-04-25 03:34:30
  */
 // 登录验证
+/* eslint-disable */
 checkLogin(2, logined());
 
 function logined() {
     $(function () {
-        var pageSize = 3; //显示五个分页
+        /* 分页器设置 */
         var currentPage = 1;
-        // var totalPages; //总条数
-        var startPage = currentPage - Math.floor(pageSize / 2);
-        var pageCount = 10;
-        initPage();
-        function initPage() {
-            $.post("../php/comments/getCommentsList.php", {
+        var totalPages = 50;
+        var pageSize = 10;
+        var options = {
+            'bootstrapMajorVersion': '3',
+            'alignment': 'center', //居中显示
+            'currentPage': currentPage, //当前页数
+            'totalPages': totalPages, //总页数 注意不是总条数
+            'onPageClicked': function (event, originalEvent, type, page) {
+                // console.log(event, originalEvent, type, page);
+                currentPage = page;
+                // data.page = currentPage;
+                this.currentPage = currentPage;
+                console.log(currentPage);
+                render();
+            }
+        };
+        render();
 
-                    currentPage: currentPage,
-                    pageCount: pageCount,
+        function render() {
+            $.get('../php/comments/getCommentsList.php', {
+                    'currentPage': currentPage,
+                    'pageSize': pageSize,
                 },
-                function (data, textStatus, jqXHR) {
-                    // console.log(data);
-                    var code = data.code;
-                    if (code == 100) {
-                        var msg = data.msg;
-                        var col = data.col
-                        var data = data.data;
-                        var totalPages = Math.ceil(col / pageCount);
-                        var html = $("#ct").tmpl(data);
+                function (response) {
+                    // console.log(response);
+                    if (response.code == 100) {
+                        var html = template('feedbackTemp', response);
                         // console.log(html);
-                        $("#dataset").empty().prepend(html);
-                        // 处理初始页码小于1时
-                        startPage = currentPage - Math.floor(pageSize / 2);
-                        if (startPage <= 0) {
-                            startPage = 1;
-                        }
-                        // 处理当结尾页数大于总页数时
-                        // console.log(totalPages);
-                        var endPage = startPage + pageSize - 1;
-                        if (endPage > totalPages) {
-                            endPage = totalPages;
-                            startPage = endPage - 2;
-                        }
-                        // 处理页数小于5时
-                        if (startPage <= 0) {
-                            startPage = 1;
-                        }
-                        var html = "";
-                        if (startPage != 1) {
-                            html += "<li><a href=\"#\" data-id = " + (currentPage - 1) + ">上一页</a></li>";
-                        }
-                        for (var i = startPage; i <= endPage; i++) {
-                            html += '<li><a href=\"#\" data-id = ' + i + '>' + i + '</a></li>';
-                        }
-                        if (endPage != totalPages) {
+                        $('#dataset').html(html);
+                        $('.total span').text(Math.ceil(response.col / pageSize));
+                        options.totalPages = Math.ceil(response.col / pageSize);
 
-                            html += "<li><a href=\"#\" data-id = " + (currentPage + 1) + ">下一页</a></li>";
-                        }
-                        // 调用模板生成分页器
-                        $("#pagination").html(html);
+                        options.currentPage = currentPage;
+                        $('#pagination').bootstrapPaginator(options);
                     } else {
-                        layer.alert(data.msg);
+                        layer.alert(data.msg, {
+                            icon: 2,
+                            function () {
+                                location.reload();
+                            }
+                        })
                     }
 
-                    // console.log(totalPages);
-                    // console.log(code);
+
+
 
                 },
-                "json"
+                'json'
             );
         }
-        // 为这些动态生成的分页a标签注册点击事件
-        $("#pagination").on("click", "a", function () {
-            // 获取当前点击页数
-            currentPage = +$(this).attr("data-id");
-            initPage();
-            return false;
-        })
+
+        /* 点击批准 */
+        $("tbody").on("click", '.approve', function () {
+            // console.log(this);
+            // 获取留言ID号进行操作
+            var that = this;
+            var id = this.parentNode.dataset.index;
+            // console.log(id);
+            // 批准发送1
+            var status = 1;
+            // 发请求 
+            $.ajax({
+                type: "post",
+                url: "../php/comments/updateFeedback.php",
+                data: {
+                    id: id,
+                    // action: 'approve',
+                    status: status
+                },
+                dataType: "json",
+                success: function (response) {
+                    console.log(response);
+                    if (response.code == 100) {
+                        layer.alert(response.msg, {
+                            icon: 1,
+
+                        })
+                        $(that).parent().prev().text('已批准');
+                        $(that).parent().parent().attr('class','success');
+                        // console.log($(that).parent());
+                    } else {
+                        layer.alert(response.msg, {
+                            icon: 2,
+                        })
+                    }
+
+                }
+            });
+        });
+
+        // 点击拒绝
+        $("tbody").on("click", '.reject', function () {
+            // console.log(this);
+            // 获取留言ID号进行操作
+            var that = this;
+            var id = this.parentNode.dataset.index;
+            // console.log(id);
+            // 批准发送1
+            var status = 2;
+            // 发请求 
+            $.ajax({
+                type: "post",
+                url: "../php/comments/updateFeedback.php",
+                data: {
+                    id: id,
+                    status: status
+                },
+                dataType: "json",
+                success: function (response) {
+                    console.log(response);
+                    if (response.code == 100) {
+                        layer.alert(response.msg, {
+                            icon: 1,
+
+                        })
+                        $(that).parent().prev().text('已拒绝');
+                        // console.log($(that).parent());
+                        $(that).parent().parent().attr('class', 'danger');
+                    } else {
+                        layer.alert(response.msg, {
+                            icon: 2,
+                        })
+                    }
+
+                }
+            });
+        });
     });
 }

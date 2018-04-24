@@ -1,0 +1,31 @@
+.hs_main .title {
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.hs_main .contain_wrap {
+  margin-top: 15px;
+}
+.hs_main .contain_wrap h6 {
+  text-align: center;
+}
+.hs_main .contain_wrap .detail {
+  position: relative;
+  padding: 20px 50px 50px 50px;
+}
+.hs_main .contain_wrap .detail textarea {
+  font-size: 18px;
+  line-height: 30px;
+  border: none;
+  outline: none;
+  resize: none;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 70%;
+  min-height: 200px;
+  background-color: inherit;
+}
+.hs_main .contain_wrap .detail img {
+  width: 100%;
+  max-width: 800px;
+}

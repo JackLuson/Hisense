@@ -26,7 +26,8 @@ if ($action == "classify") {
     // exit();
     $currentPage = ((int)$_POST['currentPage'] - 1) * 10;
     $pageCount = $_POST['pageCount'];
-    $sql2 = "SELECT a . id, a . title, b . nickname, c . name, a . created, a . status FROM articles as a LEFT JOIN users as b ON a . user_id = b . id LEFT JOIN categories as c ON a . category_id = c . id WHERE a.category_id = {$id} AND a.status = {$status}   LIMIT {$currentPage} , {$pageCount} ";
+    $sql2 = "SELECT a . id, a . title, b . nickname, c . name, a . created, a . status FROM articles as a LEFT JOIN users as b ON a . user_id = b . id LEFT JOIN categories as c ON a . category_id = c . id WHERE a.category_id = {$id} AND a.status = {$status} ORDER BY a.created DESC  LIMIT {$currentPage} , {$pageCount} ";
+    // echo $sql2; ";
     // echo $sql2;
 
     $arr2 = query($sql2);

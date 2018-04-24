@@ -7,6 +7,26 @@
   <link rel="stylesheet" href="../assets/lib/bootstrap/css/bootstrap.css">
   <link rel="stylesheet" href="../assets/lib/font-awesome/css/font-awesome.css">
   <link rel="stylesheet" href="../assets/css/common.css">
+  <style>
+    .main {
+      position: relative;
+    }
+
+    table {
+      margin-top: 20px;
+    }
+
+    .page-title {
+      margin-top: 20px;
+    }
+
+    .page {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+  </style>
+
 </head>
 
 <body>
@@ -23,23 +43,12 @@
           <button class="btn reject btn-warning btn-sm" opt="reject">批量拒绝</button>
           <button class="btn del btn-danger btn-sm" opt="del">批量删除</button>
         </div>
-        <ul id="pagination" class="pagination pagination-sm pull-right">
-          <!-- <li>
-            <a href="#">上一页</a>
-          </li>
-          <li>
-            <a href="#">1</a>
-          </li>
-          <li>
-            <a href="#">2</a>
-          </li>
-          <li>
-            <a href="#">3</a>
-          </li>
-          <li>
-            <a href="#">下一页</a>
-          </li> -->
-        </ul>
+      </div>
+      <div class="page">
+        <ul id="pagination"></ul>
+        <p class="total text-right">总页数:
+          <span class="text-right">12</span>
+        </p>
       </div>
       <table class="table table-striped table-bordered table-hover">
         <thead>
@@ -47,88 +56,56 @@
             <th class="text-center" width="40">
               <input id="ckAll" type="checkbox">
             </th>
-            <th style="min-width:80px;">作者</th>
-            <th>评论</th>
-            <th width="110" class="text-center">评论在</th>
-            <th class="text-center" width="90">提交于</th>
-            <th width="80">状态</th>
+            <th width="120">留言人</th>
+            <th class="text-center" width="150">联系方式</th>
+            <th class="text-center">留言内容</th>
+            <th class="text-center" width="90">留言于</th>
+            <th class="text-center" width="80">状态</th>
             <th class="text-center" width="100">操作</th>
           </tr>
         </thead>
         <tbody id="dataset">
-          <!-- <tr class="danger">
+          <!-- <tr class="primary">
             <td class="text-center">
               <input type="checkbox">
             </td>
             <td>大大</td>
-            <td>楼主好人，顶一个</td>
-            <td>《Hello world》</td>
-            <td>2016/10/07</td>
-            <td>未批准</td>
+            <td class="text-center">楼主好人，顶一个</td>
+            <td>《Hello world》今天很高兴，能和领导反馈一个关于xxxx的问题今天很高兴，能和领导反馈一个关于xxxx的问题今天很高兴，能和领导反馈一个关于xxxx的问题今天很高兴，能和领导反馈一今天很高兴，能和领导反馈一个关于xxxx的问题今天很高兴，能和领导反馈一个关于xxxx的问题个关于xxxx的问题</td>
+            <td class="text-center">2016/10/07</td>
+            <td class="text-center">未批准</td>
             <td class="text-center">
               <a href="post-add.html" class="btn btn-info btn-xs">批准</a>
               <a href="javascript:;" class="btn btn-danger btn-xs">删除</a>
             </td>
           </tr>
-          <tr>
-            <td class="text-center">
-              <input type="checkbox">
-            </td>
-            <td>大大</td>
-            <td>楼主好人，顶一个</td>
-            <td>《Hello world》</td>
-            <td>2016/10/07</td>
-            <td>已批准</td>
-            <td class="text-center">
-              <a href="post-add.html" class="btn btn-warning btn-xs">驳回</a>
-              <a href="javascript:;" class="btn btn-danger btn-xs">删除</a>
-            </td>
-          </tr>
-          <tr>
-            <td class="text-center">
-              <input type="checkbox">
-            </td>
-            <td>大大</td>
-            <td>楼主好人，顶一个</td>
-            <td>《Hello world》</td>
-            <td>2016/10/07</td>
-            <td>已批准</td>
-            <td class="text-center">
-              <a href="post-add.html" class="btn btn-warning btn-xs">驳回</a>
-              <a href="javascript:;" class="btn btn-danger btn-xs">删除</a>
-            </td>
-          </tr> -->
+          <tr> -->
         </tbody>
       </table>
     </div>
   </div>
-
-  <script src="../assets/lib/jquery/jquery.js"></script>
-  <script src="../assets/js/common.js"></script>
-  <script src="../assets/lib/jquery/jquery.tmpl.min.js"></script>
-  <script id="ct" , type="text/x-jquery-tmpl">
-    <tr class="danger">
+  <script id="feedbackTemp" , type="text/template">
+    {{each data}}
+    <tr class="{{if $value.status == 0}}info{{else if $value.status == 1}}success{{else if $value.status == 2 }}danger{{/if}}">
       <td class="text-center">
         <input type="checkbox">
       </td>
-      <td>${author}</td>
-      <td>${content}</td>
-      <td>${title}</td>
-      <td>${created}</td>
-      <td>
-        {{if status == 0}}
-        <span style="color : red">,未审核</span>
-        {{else status == 1}}
-        <span style="color : green">已通过</span>
-        {{else status == 2}} 已拒绝
-         {{/if}}
-      </td>
-      <td class="text-center">
-        <a href="post-add.html" class="btn agree btn-info btn-xs">批准</a>
-        <a href="javascript:;" class="btn del btn-danger btn-xs">删除</a>
+      <td>{{$value.name}}</td>
+      <td class="text-center">{{$value.phone}}</td>
+      <td>{{$value.content}}</td>
+      <td class="text-center">{{$value.created}}</td>
+      <td class="text-center">{{if $value.status == 0}}没审核{{else if $value.status == 1}}已批准{{else if $value.status == 2 }}已拒绝{{/if}}</td>
+      <td data-index={{$value.id}} class="text-center">
+        <a href="javascript:;" class="btn btn-info btn-xs approve">批准</a>
+        <a href="javascript:;" class="btn btn-danger btn-xs reject">拒绝</a>
       </td>
     </tr>
+    {{/each}}
   </script>
+  <script src="../assets/lib/jquery/jquery.js"></script>
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/lib/bootstrap-paginator/bootstrap-paginator.js"></script>
+  <script src="../assets/lib/jquery/template-web.js"></script>
   <script src="../assets/lib/layer/layer.js"></script>
   <script src="../assets/lib/bootstrap/js/bootstrap.js"></script>
   <script src="../assets/lib/jquery/jquery.cookie.js"></script>

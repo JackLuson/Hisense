@@ -1,13 +1,13 @@
 <?php
 header('Content-Type:text/html;charset=utf-8');
 require_once "../../util/php/DButil.php";
-$sql = "SELECT COUNT(*) as pageTotal FROM comments";
+$sql = "SELECT COUNT(*) as pageTotal FROM feedback";
     // echo $sql;
 $arr1 = query($sql)[0]['pageTotal'];
 
-$currentPage = ((int)$_POST['currentPage'] - 1) * 10;
-$pageCount = $_POST['pageCount'];
-$sql2 = "SELECT c.author,c.content, a.title, c.created,c.status FROM comments AS c LEFT JOIN articles AS a ON c.article_id = a.id ";
+$currentPage = ((int)$_GET['currentPage'] - 1) * 10;
+$pageSize = $_GET['pageSize'];
+$sql2 = "SELECT c.id, c.name,c.phone,c.content, c.created,c.status,a.nickname FROM feedback AS c LEFT JOIN users AS a ON c.user_id = a.id ORDER BY c.created DESC  LIMIT {$currentPage} , {$pageSize} ";
     // echo $sql2;
 
 $arr2 = query($sql2);

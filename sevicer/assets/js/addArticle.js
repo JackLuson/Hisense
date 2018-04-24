@@ -2,14 +2,15 @@
  * @Author: Jack Lu 
  * @Date: 2018-03-08 14:39:54 
  * @Last Modified by: Jack Lu
- * @Last Modified time: 2018-04-08 16:20:07
+ * @Last Modified time: 2018-04-24 02:21:15
  */
+/* eslint-disable */
 checkLogin(2, logined());
 function logined(){
     $(function () {
         // 获取分类信息
         $.post("../php/articles/getcategories.php?action=getcategories",
-            function (data, textStatus, jqXHR) {
+            function (data) {
                 // console.log(data);
                 if (data.code == 100) {
                     var data = data.data;
@@ -61,7 +62,7 @@ function logined(){
                 data = data + "&feature=" + src;
                 console.log(data);
                 $.post("../php/articles/addArticle.php?id=" + id, data,
-                    function (data, textStatus, jqXHR) {
+                    function (data) {
                         // console.log(data);
                         if (data.code == 100) {
                             layer.alert(data.msg, function () {
@@ -77,11 +78,12 @@ function logined(){
             } else {
                 // 编辑操作
                 var data = $("#articledata").serialize();
+                
                 data = data + "&feature=" + src;
                 console.log(data);
 
                 $.post("../php/articles/updateArticle.php", data,
-                    function (data, textStatus, jqXHR) {
+                    function (data) {
                         console.log(data);
                         if (data.code == 100) {
                             layer.alert(data.msg, function () {
@@ -103,7 +105,7 @@ function logined(){
             $.post("../php/articles/getArticles.php", {
                 id: articleId
             },
-                function (data, textStatus, jqXHR) {
+                function (data) {
                     console.log(data);
                     if (data.code == 100) {
                         var data = data.data[0];

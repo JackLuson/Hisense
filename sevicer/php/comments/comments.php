@@ -1,7 +1,7 @@
 <?php
 header('Content-Type:text/html;charset=utf-8');
 require_once "../../util/php/DButil.php";
-$sql = "SELECT COUNT(*) as pageTotal FROM comments";
+$sql = "SELECT COUNT(*) as pageTotal FROM feedback";
     // echo $sql;
 $arr1 = query($sql)[0]['pageTotal'];
 
@@ -17,5 +17,5 @@ if (!empty($arr2)) {
     $res["msg"] = "获取数据成功";
     $res['col'] = $arr1;
     $res["data"] = $arr2;
-}  
+}
 ?>

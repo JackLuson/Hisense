@@ -2,8 +2,9 @@
  * @Author: Jack Lu 
  * @Date: 2018-03-10 08:56:13 
  * @Last Modified by: Jack Lu
- * @Last Modified time: 2018-04-04 20:20:36
+ * @Last Modified time: 2018-04-25 02:26:58
  */
+/* eslint-disable */
 checkLogin(2, logined());
 
 function logined() {

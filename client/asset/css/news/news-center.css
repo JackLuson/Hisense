@@ -2,7 +2,7 @@
  * @Author: Jack Lu 
  * @Date: 2018-04-11 23:10:53 
  * @Last Modified by: Jack Lu
- * @Last Modified time: 2018-04-14 21:31:33
+ * @Last Modified time: 2018-04-20 18:11:46
  */
 .hs_main .row {
   position: relative;
@@ -43,6 +43,8 @@
   padding-top: 20px;
 }
 .hs_main .row .news_right .news_content ul li {
+  padding-top: 33px;
+  padding-bottom: 1px;
   position: relative;
 }
 .hs_main .row .news_right .news_content ul li a {
@@ -59,12 +61,19 @@
 }
 .hs_main .row .news_right .news_content ul li span {
   position: absolute;
-  top: 1px;
+  top: 13px;
   right: 0;
 }
-.hs_main .row .news_right #pagination {
+.hs_main .row .news_right .news_content ul li:hover {
+  background: #bcd6c9;
+}
+.hs_main .row .page {
   position: absolute;
-  bottom: 10px;
+  bottom: -35px;
   left: 50%;
-  transform: translateX(-50%);
+}
+.hs_main .row .page .total {
+  display: inline-block;
+  position: relative;
+  top: -30px;
 }
