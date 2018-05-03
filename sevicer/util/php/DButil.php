@@ -1,5 +1,5 @@
 <?php
-// header('Content-Type:text/html;charset=utf-8');
+header('Content-Type:text/html;charset=utf-8');
 require_once "config.php";
 //1. 建立连接数据库函数
 function connect()
@@ -12,7 +12,7 @@ function connect()
 
     return $connect;
 }
-    
+ 
 // 2.查询数据库
 function query($sql)
 {
